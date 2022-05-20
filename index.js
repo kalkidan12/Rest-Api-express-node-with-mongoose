@@ -1,8 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
-const conn = require("./db.config");
-const { defaultRoute, userRoute } = require("./route");
+const conn = require("./database/db.config");
+const { defaultRoute, userRoute } = require("./routes/route");
 const app = express();
 
 app.use(cors());
@@ -14,6 +14,6 @@ app.use(defaultRoute);
 
 const PORT = process.env.PORT || 4200;
 app.listen(PORT, () => {
-  conn();
-  console.log(`app running on port ${PORT}...`);
+	conn();
+	console.log(`app running on port ${PORT}...`);
 });
