@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/user", userRoute);
 app.use(defaultRoute);
 
-const PORT = process.env.PORT || 4200;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
 	conn();
 	console.log(`app running on port ${PORT}...`);
